@@ -1,0 +1,32 @@
+.stat-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.tracking-tight {
+    letter-spacing: -1px;
+}
+
+.hover-scale:active {
+    transform: scale(0.95);
+}
+
+/* Animación de entrada suave */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

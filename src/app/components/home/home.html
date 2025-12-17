@@ -1,0 +1,56 @@
+<nav class="navbar navbar-dark bg-dark px-3 mb-4 shadow">
+  <span class="navbar-brand fw-bold">✂️ Registrar Trabajo</span>
+  <div>
+    <a routerLink="/estadisticas" class="btn btn-info me-2 fw-bold">📊 Ver Caja</a>
+    <button class="btn btn-outline-danger" (click)="salir()">Salir</button>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+      
+      <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body p-4 d-grid gap-4 text-center">
+
+          <div class="zona-accion">
+            
+            <button (click)="registrarCorte()" 
+                    class="btn btn-success btn-giant w-100 shadow-sm">
+              💇‍♂️ Registrar Corte ($5000)
+            </button>
+
+            <div *ngIf="mensajeExito" class="alert alert-success fw-bold mt-3 animate-pop">
+              ✅ {{ mensajeExito }}
+            </div>
+
+          </div>
+
+          <div class="d-flex align-items-center text-muted">
+            <hr class="flex-grow-1"> <span class="mx-2 fw-bold">O</span> <hr class="flex-grow-1">
+          </div>
+
+          <div>
+            <label class="form-label text-secondary fw-bold">Otro servicio:</label>
+            <div class="input-group input-group-lg">
+              <span class="input-group-text bg-light text-success fw-bold">$</span>
+              <input type="number" 
+                     [(ngModel)]="precioVario" 
+                     placeholder="Ej: 3000" 
+                     class="form-control fw-bold"
+                     (keyup.enter)="registrarVario()">
+              
+              <button (click)="registrarVario()" 
+                      [disabled]="!precioVario"
+                      class="btn btn-warning fw-bold px-4 text-dark">
+                Guardar
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

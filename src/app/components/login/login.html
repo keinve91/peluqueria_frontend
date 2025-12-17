@@ -1,0 +1,19 @@
+<div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+  <div class="card p-4 shadow" style="width: 350px;">
+    <h3 class="text-center mb-4">💈 Acceso</h3>
+    
+    <div class="mb-3">
+      <input type="text" [(ngModel)]="usuario.username" placeholder="Usuario" class="form-control">
+    </div>
+
+    <div class="mb-3">
+      <input type="password" [(ngModel)]="usuario.password" placeholder="Contraseña" class="form-control">
+    </div>
+
+    <button (click)="ingresar()" class="btn btn-primary w-100">Entrar</button>
+    
+    <div *ngIf="mensajeError" class="alert alert-danger mt-3 text-center p-1">
+      {{ mensajeError }}
+    </div>
+  </div>
+</div>

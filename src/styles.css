@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+/* Importamos una fuente de Google moderna (opcional, pero recomendada) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5; /* Gris muy suave de fondo */
+    color: #333;
+    -webkit-font-smoothing: antialiased; /* Textos más nítidos en móviles */
+}
+
+/* Hacemos que todos los inputs y botones de Bootstrap sean más altos y fáciles de tocar en celular */
+.form-control, .btn {
+    padding: 0.75rem 1rem; /* Más relleno */
+    font-size: 1rem;
+    border-radius: 12px; /* Bordes más redondeados */
+}
+
+.btn-lg {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Sombra suave genérica para las tarjetas */
+.card-shadow {
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-radius: 16px;
+    overflow: hidden; /* Para que el header de la tarjeta respete el borde redondeado */
+}
