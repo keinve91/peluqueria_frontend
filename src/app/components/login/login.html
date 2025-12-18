@@ -1,18 +1,22 @@
-<div class="d-flex justify-content-center align-items-center vh-100 bg-light">
-  <div class="card p-4 shadow" style="width: 350px;">
-    <h3 class="text-center mb-4">💈 Acceso</h3>
+<div class="login-wrapper d-flex align-items-center justify-content-center vh-100">
+  <div class="login-card p-4 text-center">
+    <div class="logo-box mb-4">💈</div>
+    <h2 class="fw-bold mb-1">Bienvenido</h2>
+    <p class="text-secondary mb-4">Ingresa tus credenciales</p>
     
-    <div class="mb-3">
-      <input type="text" [(ngModel)]="usuario.username" placeholder="Usuario" class="form-control">
+    <div class="form-floating mb-3">
+      <input type="text" [(ngModel)]="usuario.username" class="form-control" id="u" placeholder="Usuario">
+      <label for="u">Usuario</label>
     </div>
 
-    <div class="mb-3">
-      <input type="password" [(ngModel)]="usuario.password" placeholder="Contraseña" class="form-control">
+    <div class="form-floating mb-4">
+      <input type="password" [(ngModel)]="usuario.password" class="form-control" id="p" placeholder="Password">
+      <label for="p">Contraseña</label>
     </div>
 
-    <button (click)="ingresar()" class="btn btn-primary w-100">Entrar</button>
+    <button (click)="ingresar()" class="btn btn-login w-100">INGRESAR</button>
     
-    <div *ngIf="mensajeError" class="alert alert-danger mt-3 text-center p-1">
+    <div *ngIf="mensajeError" class="alert alert-danger-custom mt-3">
       {{ mensajeError }}
     </div>
   </div>

@@ -1,0 +1,39 @@
+.login-wrapper {
+  background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(20px);
+  border-radius: 35px;
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+}
+
+.logo-box {
+  font-size: 3rem;
+  background: #334155;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.form-control {
+  background: rgba(15, 23, 42, 0.5) !important;
+  border: 1px solid #334155 !important;
+  color: white !important;
+  border-radius: 15px !important;
+}
+
+.btn-login {
+  background: var(--accent-blue);
+  color: #0f172a;
+  font-weight: 700;
+  padding: 15px;
+  border-radius: 15px;
+  letter-spacing: 1px;
+}
